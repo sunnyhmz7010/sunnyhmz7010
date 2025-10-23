@@ -1,5 +1,4 @@
 <a name="top"></a>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/github-contribution-grid-snake.svg">
@@ -14,12 +13,15 @@
 [![](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
 [![](https://img.shields.io/badge/B站-@好名字7010-red?style=for-the-badge&logo=bilibili)](https://space.bilibili.com/479435004)
 ## 🛠️ 技术栈
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+### 熟练掌握
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+### 正在学习
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ![show](https://github.com/sunnyhmz7010/sunnyhmz7010/blob/457d270769d329af07d63f77874b64a1915c7c59/show.gif)
 ## 📫 联系我
@@ -29,9 +31,6 @@
 ---
 ⭐ 欢迎 Star 我的项目！感谢访问！
 
-
-<p align="center">
-  <a href="#top">回到顶部 ↑</a>
-</p>
+[回到顶部 ↑](#top)
 
 </div>
