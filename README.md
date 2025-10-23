@@ -6,7 +6,6 @@
 
 <div align=center>
 [![Sunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=sunnyhmz7010&show_icons=true&theme=tokyonight)](https://b23.tv/iEJTnPp)
-
 [![Sunny个人小记](https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-mq%E7%99%BD-yello)](https://sunnyhmz.top/)
 [![bilibili](https://img.shields.io/badge/video-YouTube-red)](https://space.bilibili.com/479435004)
 </div>
