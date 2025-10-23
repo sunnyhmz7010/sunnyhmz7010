@@ -1,131 +1,128 @@
+<!-- 赛博代码雨背景 -->
 <p align="center">
-  <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:244,cw:1560,ch:878,q:80,w:1560/g3SbeNsyQyycX99qYMRGPo.jpg" alt="Party Animals Banner" width="100%">
+  <img src="https://cdn.jsdelivr.net/gh/cobiwave/readme-coderain@master/coderain.svg" alt="Cyber Code Rain" width="100%">
 </p>
 
-<h1 align="center">欢迎来到 [你的用户名] 的科技动物派对！ 🐶🚀</h1>
-
+<!-- 霓虹动态标题 -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=你的用户名&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views">
-  <img src="https://img.shields.io/github/followers/你的用户名?label=Followers&style=social" alt="Followers">
-  <img src="https://img.shields.io/github/stars/你的用户名?label=Stars&style=social" alt="Stars">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=38&pause=1000&color=00FFFF&center=true&vCenter=true&random=false&width=900&lines=%F0%9F%90%BA+%E7%83%88%E5%85%BD%E7%A7%91%E6%8A%80%E6%B4%BE%E5%AF%B9!;%E8%9E%8D%E5%90%88%E7%9A%84%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%8F%AF%E7%88%B1%E5%8A%A8%E7%89%A9;Welcome+to+My+Cyber+Party+Zone!" alt="Neon Title">
 </p>
 
+<!-- 访问统计 + 社交徽章 -->
 <p align="center">
-  <em>我是 [你的名字]，一个热爱代码的开发者，就像 Party Animals 里的小动物们热爱派对一样！在这里，我们用科技点亮可爱世界。🐱💻</em>
+  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Visitors&color=00ffea&style=for-the-badge&logo=dependabot" />
+  <img src="https://img.shields.io/github/followers/YOUR_USERNAME?label=Crew&style=for-the-badge&logo=github&color=ff00ff" />
+  <img src="https://img.shields.io/github/stars/YOUR_USERNAME?label=Stars&style=for-the-badge&logo=starship&color=ffd700" />
 </p>
+
+<div align="center">
+
+```diff
++ 猛兽派对 × 赛博朋克 = 你的 GitHub 主页
+```
+
+</div>
 
 ---
 
-### 🐻 关于我：一只科技熊的自我介绍
-
-<grok-card data-id="26b240" data-type="image_card"></grok-card>
-
-
-- **身份**：全栈开发者 / AI 爱好者 / 开源贡献者
-- **爱好**：编码、游戏（尤其是 Party Animals！）、探索新技术
-- **座右铭**： "Code like a party animal – fun, fierce, and full of surprises!" 🎉
-- **当前目标**：构建更多创新项目，让世界更可爱一点。
+## 关于我 — *一只穿宇航服的柯基*
 
 <details>
-  <summary>点击查看我的 GitHub Stats 📊</summary>
-  <p align="center">
-    <img src="https://github-readme-stats.vercel.app/api?username=你的用户名&show_icons=true&theme=radical" alt="GitHub Stats">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=你的用户名&theme=radical" alt="GitHub Streak">
-  </p>
+<summary>
+  <img src="https://img.shields.io/badge/%F0%9F%94%B4%E2%9A%A1%EF%B8%8F-%E7%82%B9%E5%87%BB%E7%BF%BB%E8%BD%AC%E8%A7%86%E8%A7%89%E5%8D%A1%E7%89%87-%E2%AD%90%E2%AD%90%E2%AD%90-00ffff?style=for-the-badge&logo=react" alt="Flip Card Trigger">
+</summary>
+
+<div align="center" style="perspective: 1000px; margin: 20px 0;">
+  <div style="position:relative;width:100%;max-width:800px;height:300px;margin:0 auto;transform-style:preserve-3d;animation:flip 1.5s ease-in-out;">
+    <div style="position:absolute;width:100%;backface-visibility:hidden;border-radius:12px;overflow:hidden;">
+      <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00FFFF&icon_color=FF6EFF&text_color=FFFFFF&border_radius=12" alt="GitHub Stats">
+    </div>
+    <div style="position:absolute;width:100%;backface-visibility:hidden;transform:rotateY(180deg);border-radius:12px;overflow:hidden;">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight&hide_border=true&background=0D1117&stroke=00FFFF&ring=FF6EFF&fire=FFD700&currStreakLabel=00FFFF&border_radius=12" alt="GitHub Streak">
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+</style>
 </details>
 
+> **身份**：`Full-Stack Coder | AI Tinkerer | Open-Source Beast`  
+> **座右铭**：`Code hard, party harder. 狗狗计算机`  
+> **当前状态**：正在用 Python 训练 Party Animals 识别代码漏洞
+
 ---
 
-### 🐊 我的技能栈：科技武器库
+## 科技武器库 — *Neon Skill Matrix*
 
-就像 Party Animals 里的动物们各有绝技，我的技术栈也超级多样！
+<div align="center">
+  <div id="tsparticles" style="height:180px;"></div>
+  <script type="module">
+    import { tsParticles } from "https://cdn.jsdelivr.net/npm/tsparticles@2/+esm";
+    tsParticles.load("tsparticles", {
+      background: { color: "#0d1117" },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 80, density: { enable: true } },
+        color: { value: ["#00ffff", "#ff00ff", "#ffff00"] },
+        shape: { type: "circle" },
+        opacity: { value: 0.6, random: true },
+        size: { value: 3, random: true },
+        move: { enable: true, speed: 1.5, direction: "none", outModes: "out" }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 100, duration: 0.4 } }
+      },
+      detectRetina: true
+    });
+  </script>
+</div>
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-      <br>Python
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-      <br>JavaScript
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-      <br>React
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
-      <br>Node.js
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-      <br>Docker
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS">
-      <br>AWS
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="ML">
-      <br>ML/AI
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-      <br>Git
-    </td>
-  </tr>
-</table>
+| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white&labelColor=0D1117) | ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black&labelColor=0D1117) | ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black&labelColor=0D1117) |
+|:---:|:---:|:---:|
+| ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white&labelColor=0D1117) | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white&labelColor=0D1117) | ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white&labelColor=0D1117) |
 
 <p align="center">
-  <img src="https://www.theloadout.com/wp-content/sites/theloadout/2023/08/party-animals-characters.jpg" alt="Party Animals Skills" width="50%">
+  <img src="https://media.giphy.com/media/Wq6eQz9KMXiit4Gsky/giphy.gif" width="60%" alt="Party Animals in Cyber World">
 </p>
 
 ---
 
-### 🐥 精选项目：我的派对杰作
+## 派对项目 — *Holographic Showcase*
 
-这里是我的得意之作，每一个都像 Party Animals 里的小游戏一样有趣！
-
-- **[项目1名称]**  
-  描述：一个用 React 构建的 Web App，融入 AI 元素。  
-  <img src="https://img.shields.io/github/stars/你的用户名/项目1?style=flat" alt="Stars">  
-  [查看项目](https://github.com/你的用户名/项目1)
-
-- **[项目2名称]**  
-  描述：Python 脚本自动化工具，超级实用且可爱！  
-  <img src="https://img.shields.io/github/stars/你的用户名/项目2?style=flat" alt="Stars">  
-  [查看项目](https://github.com/你的用户名/项目2)
-
-<details>
-  <summary>更多项目？点击展开！</summary>
-  - **[项目3名称]**：...  
-  - **[项目4名称]**：...
-</details>
-
-<p align="center">
-  <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/party-animals-best-animals.jpg?w=1600&h=1200&fit=crop" alt="Party Animals Projects" width="60%">
-</p>
+| 项目 | 描述 | 链接 |
+|------|------|------|
+| **AI-Party-Bot** | 用 Party Animals 训练的 Discord 机器人，会“汪汪”写代码 | [![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/ai-party-bot?style=social)](https://github.com/YOUR_USERNAME/ai-party-bot) |
+| **Cyber-Paw-UI** | 霓虹风 React 组件库，内置动物表情包 | [![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/cyber-paw-ui?style=social)](https://github.com/YOUR_USERNAME/cyber-paw-ui) |
+| **PawScript** | 一门用动物叫声编写的“编程语言” | [![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/pawscript?style=social)](https://github.com/YOUR_USERNAME/pawscript) |
 
 ---
 
-### 🐕 联系我：来派对吧！
-
-想合作或聊天？随时找我！
-
-- 📧 Email: [你的邮箱]
-- 🐦 Twitter/X: [@你的用户名]
-- 🔗 LinkedIn: [你的 LinkedIn 链接]
-- 🌐 Website: [你的网站]
+## 联系我 — *打开传送门*
 
 <p align="center">
-  <img src="https://www.gamegrin.com/assets/Uploads/2023/09/14/_resampled/resizedimage640360-PartyAnimals-characterselection.jpg" alt="Party Animals Contact" width="40%">
+  <a href="mailto:your@email.com">
+    <img src="https://img.shields.io/badge/-Email-00FFFF?style=for-the-badge&logo=gmail&logoColor=black" />
+  </a>
+  <a href="https://twitter.com/YOUR_TWITTER">
+    <img src="https://img.shields.io/badge/-Twitter-FF6EFF?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/YOUR_LINKEDIN">
+    <img src="https://img.shields.io/badge/-LinkedIn-FFD700?style=for-the-badge&logo=linkedin&logoColor=black" />
+  </a>
 </p>
 
 <p align="center">
-  <em>感谢访问！让我们一起在代码世界里狂欢～ 🥳</em>
+  <img src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif" width="40%" alt="Party Animals Dancing">
+</p>
+
+<p align="center">
+  <em>感谢访问！让我们在代码与派对中狂欢！狂欢计算机✨</em>
 </p>
 
 <p align="center">
