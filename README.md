@@ -10,9 +10,9 @@
 
 <!-- 访问统计 + 社交徽章 -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Visitors&color=00ffea&style=for-the-badge&logo=dependabot" />
-  <img src="https://img.shields.io/github/followers/YOUR_USERNAME?label=Crew&style=for-the-badge&logo=github&color=ff00ff" />
-  <img src="https://img.shields.io/github/stars/YOUR_USERNAME?label=Stars&style=for-the-badge&logo=starship&color=ffd700" />
+  <img src="https://komarev.com/ghpvc/?username=sunnyhmz7010&label=Visitors&color=00ffea&style=for-the-badge&logo=dependabot" />
+  <img src="https://img.shields.io/github/followers/sunnyhmz7010?label=Crew&style=for-the-badge&logo=github&color=ff00ff" />
+  <img src="https://img.shields.io/github/stars/sunnyhmz7010?label=Stars&style=for-the-badge&logo=starship&color=ffd700" />
 </p>
 
 <div align="center">
