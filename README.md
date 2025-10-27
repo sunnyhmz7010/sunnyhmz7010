@@ -7,13 +7,8 @@
   <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/github-contribution-grid-snake.svg">
 </picture>
 <br>
-<br>
 
 ![](https://github-readme-stats.vercel.app/api?username=sunnyhmz7010&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&theme=ambient_gradient&locale=cn)
-
-<img src="https://github-profile-trophy.vercel.app/?username=sunnyhmz7010&theme=gruvbox&no-frame=true&row=1&column=7"/>
-<br>
-<br>
 
 [![](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
 [![](https://img.shields.io/badge/B站-@好名字7010-red?style=for-the-badge&logo=bilibili)](https://space.bilibili.com/479435004)
