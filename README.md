@@ -9,7 +9,7 @@
 
 ### 👋 关于我  
 #### 🚀 网络空间安全专业在读本科生 | CTF爱好者  
-#### 🌱 正在深耕跨平台应用开发（React Native/Python）  
+#### 🌱 正在开发start-your-python项目  
 #### 💬 欢迎随时找我聊天
 
 [![](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
