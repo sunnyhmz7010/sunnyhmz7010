@@ -19,5 +19,5 @@
 
 ![Stats](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/stats.svg)
 
-![Show](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/main/show.gif)
+![Show](https://github.com/sunnyhmz7010/sunnyhmz7010/blob/457d270769d329af07d63f77874b64a1915c7c59/show.gif)
 </div>
