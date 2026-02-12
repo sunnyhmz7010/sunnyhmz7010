@@ -15,9 +15,9 @@
 [![](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
 [![](https://img.shields.io/badge/B站-@好名字7010-red?style=for-the-badge&logo=bilibili)](https://space.bilibili.com/479435004)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=sunnyhmz7010&theme=ambient_gradient&locale=cn&stats_format=bytes)
+![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 
-![](https://github-readme-stats.vercel.app/api?username=sunnyhmz7010&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&theme=ambient_gradient&locale=cn)
+![Stats](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/stats.svg)
 
 ![](https://github.com/sunnyhmz7010/sunnyhmz7010/blob/457d270769d329af07d63f77874b64a1915c7c59/show.gif)
 </div>
