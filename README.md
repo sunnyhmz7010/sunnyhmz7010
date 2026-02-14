@@ -12,7 +12,7 @@
 [![Blog](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
 [![Bilibili](https://img.shields.io/badge/B站-@好名字7010-red?style=for-the-badge&logo=bilibili)](https://space.bilibili.com/479435004)
 
-![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 ![Stats](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/stats.svg)
+![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 
 ![Show](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/main/show.gif)
