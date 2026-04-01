@@ -6,7 +6,7 @@
 
 ## 👋 关于我  
 #### 🚀 网络空间安全专业在读本科生 | CTF爱好者  
-#### 🌱 正在开发 start-your-python 与 halo-plugin-schedule-calendar 项目  
+#### 🌱 正在参与2025开源安全奖励计划  
 #### 💬 纵有狂风拔地起，我亦乘风破万里。
 
 [![Blog](https://img.shields.io/badge/博客-Sunny个人小记-blue?style=for-the-badge&logo=blogger)](https://sunnyhmz.top)
