@@ -1,0 +1,57 @@
+name: Export Markdown to Word
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set Variables
+        id: vars
+        run: |
+          export TZ='Asia/Shanghai'
+          PREFIX="第12章-AI辅助下的算法设计与实现"
+          STATIC_NAME="第12章，AI辅助下的算法设计与实现.docx"
+          TIMESTAMP=$(date +'%Y%m%d_%H%M')
+          
+          echo "word_name=${PREFIX}_${TIMESTAMP}.docx" >> $GITHUB_OUTPUT
+          echo "static_name=${STATIC_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Convert to Word
+        run: |
+          pandoc Markdown.md \
+            --from gfm \
+            --to docx \
+            --highlight-style breezedark \
+            --resource-path=.:images \
+            --fail-if-warnings \
+            -o "${{ steps.vars.outputs.word_name }}"
+          
+          cp "${{ steps.vars.outputs.word_name }}" "${{ steps.vars.outputs.static_name }}"
+
+      - name: Commit and Push to Main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git checkout main
+          mkdir -p output
+          
+          mv "${{ steps.vars.outputs.word_name }}" output/
+          mv "${{ steps.vars.outputs.static_name }}" output/
+          
+          git add output/
+          git commit -m "chore: 导出文档及更新固定版本 [skip ci]"
+          git push origin main
