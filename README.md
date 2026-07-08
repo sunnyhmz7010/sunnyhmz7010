@@ -16,6 +16,4 @@
 ![Stats](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/stats.svg)
 ![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 
-[![IP 信息卡片](https://card.net.coffee/v1/card.svg?style=aurora)](https://ip.net.coffee/ip)
-
-![Show](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/main/show.gif)
+[![IP 信息卡片](https://card.net.coffee/v1/card.svg?style=aurora)](https://ip.net.coffee/ip/ "查看 IP")
