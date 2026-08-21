@@ -47,8 +47,8 @@
       </a>
     </td>
     <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/CList">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-CList.svg" alt="CList" />
+      <a href="https://github.com/sunnyhmz7010/EdgeChat-TG">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-EdgeChat-TG.svg" alt="EdgeChat-TG" />
       </a>
     </td>
   </tr>
