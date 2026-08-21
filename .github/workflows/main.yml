@@ -67,12 +67,12 @@ jobs:
           path: dist/pin-halo-plugin-schedule-calendar.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card (CList)
+      - name: Generate pin card (EdgeChat-TG)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=CList&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
-          path: dist/pin-CList.svg
+          options: username=sunnyhmz7010&repo=EdgeChat-TG&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          path: dist/pin-EdgeChat-TG.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card (mmwx-probe-komari-theme-adapter)
