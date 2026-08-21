@@ -25,8 +25,41 @@
 
 [![IP 信息卡片](https://card.net.coffee/v1/card.svg?style=aurora)](https://ip.net.coffee/ip "查看 IP")
 
-| | |
-| :---: | :---: |
-| [![wenqu](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg)](https://github.com/Ryrant/wenqu-chinese-learning-platform) | [![telegram-bot-api-file-streaming](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg)](https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming) |
-| [![halo-plugin-schedule-calendar](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg)](https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar) | [![CList](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-CList.svg)](https://github.com/sunnyhmz7010/CList) |
-| [![mmwx-probe-komari-theme-adapter](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg)](https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter) | [![SeekMeow](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg)](https://github.com/sunnyhmz7010/SeekMeow) |
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" />
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg" alt="telegram-bot-api-file-streaming" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg" alt="halo-plugin-schedule-calendar" />
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/sunnyhmz7010/CList">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-CList.svg" alt="CList" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" />
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/sunnyhmz7010/SeekMeow">
+        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" />
+      </a>
+    </td>
+  </tr>
+</table>
