@@ -24,3 +24,12 @@
 ![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 
 [![IP 信息卡片](https://card.net.coffee/v1/card.svg?style=aurora)](https://ip.net.coffee/ip "查看 IP")
+
+[![wenqu-chinese-learning-platform](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg)](https://github.com/Ryrant/wenqu-chinese-learning-platform)
+[![telegram-bot-api-file-streaming](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg)](https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming)
+
+[![halo-plugin-schedule-calendar](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg)](https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar)
+[![CList](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-CList.svg)](https://github.com/sunnyhmz7010/CList)
+
+[![mmwx-probe-komari-theme-adapter](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg)](https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter)
+[![SeekMeow](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg)](https://github.com/sunnyhmz7010/SeekMeow)
