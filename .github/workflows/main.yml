@@ -43,6 +43,14 @@ jobs:
           path: dist/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate pin card (wenqu-chinese-learning-platform)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=Ryrant&repo=wenqu-chinese-learning-platform&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          path: dist/pin-wenqu-chinese-learning-platform.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate pin card (telegram-bot-api-file-streaming)
         uses: stats-organization/github-readme-stats-action@v2
         with:
