@@ -27,41 +27,6 @@
 
 ### 🚀 正在活跃开发 / 维护的项目
 
-<table>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg" alt="telegram-bot-api-file-streaming" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg" alt="halo-plugin-schedule-calendar" />
-      </a>
-    </td>
-    <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/SeekMeow">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" />
-      </a>
-    </td>
-  </tr>
-</table>
-
-
 <p align="center">
   <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" width="49%" />
