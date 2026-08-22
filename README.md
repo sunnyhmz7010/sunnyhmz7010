@@ -60,3 +60,22 @@
     </td>
   </tr>
 </table>
+
+
+<p align="center">
+  <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg" alt="telegram-bot-api-file-streaming" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg" alt="halo-plugin-schedule-calendar" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/SeekMeow">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" width="49%" />
+  </a>
+</p>
