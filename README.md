@@ -47,17 +47,12 @@
       </a>
     </td>
     <td width="50%">
-      <a href="https://github.com/sunnyhmz7010/EdgeChat-TG">
-        <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-EdgeChat-TG.svg" alt="EdgeChat-TG" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
       <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
         <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" />
       </a>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
       <a href="https://github.com/sunnyhmz7010/SeekMeow">
         <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" />
