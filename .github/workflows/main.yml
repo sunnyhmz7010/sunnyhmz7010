@@ -83,6 +83,14 @@ jobs:
           path: dist/pin-SeekMeow.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate pin card (SBMeow)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=sunnyhmz7010&repo=SBMeow&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          path: dist/pin-SBMeow.svg
+          token: ${{ secrets.GITHUB_TOKEN }}      
+
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
