@@ -81,24 +81,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate pin card (vofly)
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=sunnyhmz7010&repo=vofly&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
-          path: dist/pin-vofly.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
-           
-      - name: Generate pin card (TGList)
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=sunnyhmz7010&repo=TGList&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
-          path: dist/pin-TGList.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
-
       - name: Generate pin card (SeekMeow)
         uses: stats-organization/github-readme-stats-action@v2
         with:
@@ -114,6 +96,15 @@ jobs:
           card: pin
           options: username=sunnyhmz7010&repo=SBMeow&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-SBMeow.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate pin card (vofly)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=sunnyhmz7010&repo=vofly&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
+          path: dist/pin-vofly.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
