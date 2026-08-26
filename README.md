@@ -40,16 +40,13 @@
   <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/vofly">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-vofly.svg" alt="vofly" width="49%" />
-  </a>
-  <a href="https://github.com/sunnyhmz7010/TGList">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-TGList.svg" alt="TGList" width="49%" />
-  </a>
   <a href="https://github.com/sunnyhmz7010/SeekMeow">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" width="49%" />
   </a>
   <a href="https://github.com/sunnyhmz7010/SBMeow">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SBMeow.svg" alt="SBMeow" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/vofly">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-vofly.svg" alt="vofly" width="49%" />
   </a>
 </p>
