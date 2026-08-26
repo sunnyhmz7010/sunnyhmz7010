@@ -34,6 +34,7 @@ jobs:
           options: username=${{ github.repository_owner }}&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&show_icons=true&theme=ambient_gradient&locale=cn
           path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate top languages card
         uses: stats-organization/github-readme-stats-action@v2
@@ -42,70 +43,79 @@ jobs:
           options: username=${{ github.repository_owner }}&theme=ambient_gradient&locale=cn&stats_format=bytes
           path: dist/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (wenqu-chinese-learning-platform)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=Ryrant&repo=wenqu-chinese-learning-platform&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=Ryrant&repo=wenqu-chinese-learning-platform&show_owner=true
           path: dist/pin-wenqu-chinese-learning-platform.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (telegram-bot-api-file-streaming)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=telegram-bot-api-file-streaming&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=telegram-bot-api-file-streaming&show_owner=true
           path: dist/pin-telegram-bot-api-file-streaming.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (halo-plugin-schedule-calendar)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=halo-plugin-schedule-calendar&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=halo-plugin-schedule-calendar&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-halo-plugin-schedule-calendar.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (mmwx-probe-komari-theme-adapter)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=mmwx-probe-komari-theme-adapter&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=mmwx-probe-komari-theme-adapter&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-mmwx-probe-komari-theme-adapter.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (vofly)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=vofly&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=vofly&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-vofly.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
            
       - name: Generate pin card (TGList)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=TGList&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=TGList&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-TGList.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (SeekMeow)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=SeekMeow&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=SeekMeow&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-SeekMeow.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: Generate pin card (SBMeow)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=SBMeow&show_owner=true&show=prs_authored,prs_commented,prs_reviewed,issues_authored,issues_commented
+          options: username=sunnyhmz7010&repo=SBMeow&show_owner=true&show=prs_authored,prs_commented,issues_authored,issues_commented
           path: dist/pin-SBMeow.svg
-          token: ${{ secrets.GITHUB_TOKEN }}      
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
 
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
