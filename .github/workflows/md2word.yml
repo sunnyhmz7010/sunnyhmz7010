@@ -3,12 +3,13 @@ name: Export Markdown to Word
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   convert-and-push:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
