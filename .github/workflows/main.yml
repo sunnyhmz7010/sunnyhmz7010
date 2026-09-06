@@ -108,15 +108,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate pin card (selenium-nanoparticle-cytotoxicity)
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=sunnyhmz7010&repo=selenium-nanoparticle-cytotoxicity&show=prs_authored,prs_commented,issues_authored,issues_commented
-          path: dist/pin-selenium-nanoparticle-cytotoxicity.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
-
       - name: push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
