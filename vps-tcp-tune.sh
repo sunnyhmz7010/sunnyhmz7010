@@ -1342,14 +1342,19 @@ detect_bandwidth() {
     echo "" >&2
     echo -e "${gl_kjlan}=== 服务器带宽检测 ===${gl_bai}" >&2
     echo "" >&2
-    echo "请选择带宽配置方式：" >&2
-    echo "1. 自动检测（推荐，自动选择最近服务器）" >&2
-    echo "2. 手动指定测速服务器（指定服务器ID）" >&2
-    echo "3. 手动选择预设档位（9个常用带宽档位）" >&2
-    echo "" >&2
-    
-    read -e -p "请输入选择 [1]: " bw_choice
-    bw_choice=${bw_choice:-1}
+
+    if [ "$AUTO_MODE" = "1" ]; then
+        bw_choice=1
+    else
+        echo "请选择带宽配置方式：" >&2
+        echo "1. 自动检测（推荐，自动选择最近服务器）" >&2
+        echo "2. 手动指定测速服务器（指定服务器ID）" >&2
+        echo "3. 手动选择预设档位（9个常用带宽档位）" >&2
+        echo "" >&2
+        
+        read -e -p "请输入选择 [1]: " bw_choice
+        bw_choice=${bw_choice:-1}
+    fi
 
     case "$bw_choice" in
         1)
@@ -2188,13 +2193,9 @@ bbr_configure_direct() {
     echo -e "${gl_kjlan}=== 配置 BBR v3 + FQ 直连/落地优化（智能检测版） ===${gl_bai}"
     echo ""
     
-    # 步骤 0：SWAP智能检测和建议
-    echo -e "${gl_zi}[步骤 1/6] 检测虚拟内存（SWAP）配置...${gl_bai}"
-    check_and_suggest_swap
-    
-    # 步骤 0.5：带宽检测和缓冲区计算
+    # 带宽检测和缓冲区计算
     echo ""
-    echo -e "${gl_zi}[步骤 2/6] 检测服务器带宽并计算最优缓冲区...${gl_bai}"
+    echo -e "${gl_zi}[步骤 1/5] 检测服务器带宽并计算最优缓冲区...${gl_bai}"
 
     local detected_bandwidth=$(detect_bandwidth)
 
@@ -2224,7 +2225,7 @@ bbr_configure_direct() {
     sleep 2
     
     echo ""
-    echo -e "${gl_zi}[步骤 3/6] 清理配置冲突...${gl_bai}"
+    echo -e "${gl_zi}[步骤 2/5] 清理配置冲突...${gl_bai}"
     echo "正在检查配置冲突..."
     
     # 备份主配置文件（如果还没备份）
@@ -2250,7 +2251,7 @@ bbr_configure_direct() {
 
     # 步骤 3：创建独立配置文件（使用动态缓冲区）
     echo ""
-    echo -e "${gl_zi}[步骤 4/6] 创建配置文件...${gl_bai}"
+    echo -e "${gl_zi}[步骤 3/5] 创建配置文件...${gl_bai}"
     echo "正在创建新配置..."
     
     # 获取物理内存用于虚拟内存参数调整
@@ -2347,7 +2348,7 @@ EOF
 
     # 步骤 4：应用配置
     echo ""
-    echo -e "${gl_zi}[步骤 5/6] 应用所有优化参数...${gl_bai}"
+    echo -e "${gl_zi}[步骤 4/5] 应用所有优化参数...${gl_bai}"
     echo "正在应用配置..."
     local sysctl_output
     sysctl_output=$(sysctl -p "$SYSCTL_CONF" 2>&1)
@@ -2522,7 +2523,7 @@ LIMITSEOF
 
     # 步骤 5：验证配置是否真正生效
     echo ""
-    echo -e "${gl_zi}[步骤 6/6] 验证配置...${gl_bai}"
+    echo -e "${gl_zi}[步骤 5/5] 验证配置...${gl_bai}"
     
     local actual_qdisc=$(sysctl -n net.core.default_qdisc 2>/dev/null)
     local actual_cc=$(sysctl -n net.ipv4.tcp_congestion_control 2>/dev/null)
@@ -2810,7 +2811,11 @@ install_xanmod_kernel() {
     echo "支持系统: Debian/Ubuntu x86_64（ARM64 请使用功能 3）"
     echo -e "${gl_huang}警告: 将升级 Linux 内核，请提前备份重要数据！${gl_bai}"
     echo "------------------------------------------------"
-    read -e -p "确定继续安装吗？(Y/N): " choice
+    if [ "$AUTO_MODE" = "1" ]; then
+        choice=Y
+    else
+        read -e -p "确定继续安装吗？(Y/N): " choice
+    fi
 
     case "$choice" in
         [Yy])
@@ -2844,7 +2849,6 @@ install_xanmod_kernel() {
 
     # 环境准备
     check_disk_space 3 || return 1
-    check_swap
     install_package wget gnupg || { echo -e "${gl_hong}错误: 无法安装必要依赖 wget/gnupg${gl_bai}"; return 1; }
 
     # 添加 XanMod GPG 密钥（分步执行，避免管道 $? 只检查最后一条命令）
@@ -3893,14 +3897,17 @@ dns_purify_and_harden() {
         echo ""
         echo -e "${gl_huang}提示：重启后 DNS 会自动恢复，无需担心${gl_bai}"
         echo ""
-        if [ "$AUTO_MODE" = "1" ]; then
+        if [ "${ONE_SHOT_MODE:-}" = "1" ]; then
+            echo ""
+        elif [ "$AUTO_MODE" = "1" ]; then
             return
+        else
+            read -e -p "$(echo -e "${gl_huang}如需重新配置请输入 y，返回主菜单按回车: ${gl_bai}")" dns_reconfig
+            if [[ ! "$dns_reconfig" =~ ^[Yy]$ ]]; then
+                return
+            fi
+            echo ""
         fi
-        read -e -p "$(echo -e "${gl_huang}如需重新配置请输入 y，返回主菜单按回车: ${gl_bai}")" dns_reconfig
-        if [[ ! "$dns_reconfig" =~ ^[Yy]$ ]]; then
-            return
-        fi
-        echo ""
     fi
 
     # ==================== DNS模式选择 ====================
@@ -3916,21 +3923,28 @@ dns_purify_and_harden() {
     echo "     备用：无"
     echo "     加密：无（国内DNS不支持DoT/DNSSEC）"
     echo ""
+    echo "  3. 不运行功能5"
+    echo ""
     if [ "$AUTO_MODE" = "1" ]; then
         dns_mode_choice=1
     else
-        read -e -p "$(echo -e "${gl_huang}请选择 (1/2，默认1): ${gl_bai}")" dns_mode_choice
+        read -e -p "$(echo -e "${gl_huang}请选择 (1/2/3，默认1): ${gl_bai}")" dns_mode_choice
         dns_mode_choice=${dns_mode_choice:-1}
     fi
 
     # 验证输入
-    if [[ ! "$dns_mode_choice" =~ ^[1-2]$ ]]; then
+    if [[ ! "$dns_mode_choice" =~ ^[1-3]$ ]]; then
         dns_mode_choice=1
+    fi
+
+    if [ "$dns_mode_choice" = "3" ]; then
+        echo -e "${gl_huang}已跳过功能5${gl_bai}"
+        return
     fi
 
     echo ""
 
-    if [ "$AUTO_MODE" = "1" ]; then
+    if [ "$AUTO_MODE" = "1" ] || [ "${ONE_SHOT_MODE:-}" = "1" ]; then
         confirm=y
     else
         read -e -p "$(echo -e "${gl_huang}是否继续执行？(y/n): ${gl_bai}")" confirm
@@ -6741,7 +6755,11 @@ update_xanmod_kernel() {
     echo "$upgradable"
     echo ""
     
-    read -e -p "确定更新 XanMod 内核吗？(Y/N): " confirm
+    if [ "$AUTO_MODE" = "1" ]; then
+        confirm=Y
+    else
+        read -e -p "确定更新 XanMod 内核吗？(Y/N): " confirm
+    fi
     
     case "$confirm" in
         [Yy])
@@ -25256,6 +25274,88 @@ ptm_menu() {
     done
 }
 
+
+# hosts文件优化
+optimize_hosts_file() {
+    echo -e "${gl_kjlan}=== hosts 文件优化 ===${gl_bai}"
+
+    local hosts_file="/etc/hosts"
+    local backup_file="/etc/hosts.bak.original"
+    local hostname_value
+    local temp_file
+
+    hostname_value=$(hostname 2>/dev/null | tr -d '\r\n')
+
+    if [ ! -e "$hosts_file" ]; then
+        touch "$hosts_file" || {
+            echo -e "${gl_hong}错误: 无法创建 /etc/hosts${gl_bai}"
+            return 1
+        }
+    fi
+
+    if [ ! -f "$backup_file" ]; then
+        cp -a "$hosts_file" "$backup_file" 2>/dev/null || true
+    fi
+
+    temp_file=$(mktemp /tmp/hosts.XXXXXX) || {
+        echo -e "${gl_hong}错误: 无法创建临时文件${gl_bai}"
+        return 1
+    }
+
+    awk '
+        {
+            sub(/\r$/, "")
+        }
+        /^[[:space:]]*$/ {
+            if (!blank) print ""
+            blank=1
+            next
+        }
+        {
+            blank=0
+        }
+        /^[[:space:]]*#/ {
+            print
+            next
+        }
+        !seen[$0]++ {
+            print
+        }
+    ' "$hosts_file" > "$temp_file"
+
+    if ! awk '
+        $1 !~ /^#/ {
+            for (i = 2; i <= NF; i++) {
+                if ($i == "localhost") found=1
+            }
+        }
+        END { exit !found }
+    ' "$temp_file"; then
+        printf '127.0.0.1\tlocalhost\n' >> "$temp_file"
+    fi
+
+    if [ -n "$hostname_value" ] && ! awk -v host="$hostname_value" '
+        $1 !~ /^#/ {
+            for (i = 2; i <= NF; i++) {
+                if ($i == host) found=1
+            }
+        }
+        END { exit !found }
+    ' "$temp_file"; then
+        printf '127.0.1.1\t%s\n' "$hostname_value" >> "$temp_file"
+    fi
+
+    if cat "$temp_file" > "$hosts_file"; then
+        echo -e "${gl_lv}✅ hosts 文件优化完成${gl_bai}"
+    else
+        echo -e "${gl_hong}❌ hosts 文件写入失败${gl_bai}"
+        rm -f "$temp_file"
+        return 1
+    fi
+
+    rm -f "$temp_file"
+}
+
 # 显示帮助信息
 show_help() {
     cat << EOF
@@ -25323,6 +25423,32 @@ parse_args() {
     done
 }
 
+
+run_personalized_tune() {
+    AUTO_MODE=1
+
+    # 功能1
+    check_bbr_status
+    local is_installed=$?
+    if [ $is_installed -eq 0 ]; then
+        update_xanmod_kernel
+    else
+        install_xanmod_kernel
+    fi
+
+    # 功能3
+    bbr_configure_direct
+
+    # 功能5
+    AUTO_MODE=""
+    ONE_SHOT_MODE=1
+    dns_purify_and_harden
+    ONE_SHOT_MODE=""
+
+    # hosts文件优化
+    optimize_hosts_file
+}
+
 main() {
     # 先解析参数
     parse_args "$@"
@@ -25333,17 +25459,12 @@ main() {
     # 自动清理旧版功能4的MTU优化残留
     auto_cleanup_legacy_mtu
 
-    # Phase E:检测并迁移 CF Tunnel 老路径配置(空 VPS 会 fast-path 早退,耗时可忽略)
-    cf_helper_migrate_legacy 2>/dev/null
-
     # 加载用户配置（如果存在）
     [ -f "/etc/net-tcp-tune.conf" ] && source "/etc/net-tcp-tune.conf"
     [ -f "$HOME/.net-tcp-tune.conf" ] && source "$HOME/.net-tcp-tune.conf"
 
-    # 交互式菜单
-    while true; do
-        show_main_menu
-    done
+    # 单次运行
+    run_personalized_tune
 }
 
 # 执行主函数
