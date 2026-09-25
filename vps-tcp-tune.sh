@@ -368,7 +368,7 @@ manage_ipv6() {
         
         echo "------------------------------------------------"
         echo "1. 永久禁用IPv6（重启后仍生效）"
-        echo "3. 取消永久禁用（完全还原）"
+        echo "2. 取消永久禁用（完全还原）"
         echo "0. 不管理IPv6，继续"
         echo "------------------------------------------------"
         read -e -p "请输入选择: " choice
@@ -378,7 +378,7 @@ manage_ipv6() {
                 disable_ipv6_permanent
                 return
                 ;;
-            3)
+            2)
                 cancel_ipv6_permanent_disable
                 return
                 ;;
