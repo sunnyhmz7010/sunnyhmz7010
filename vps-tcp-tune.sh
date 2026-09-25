@@ -145,26 +145,55 @@ disable_ipv6_permanent() {
     if [ -f /etc/sysctl.d/99-disable-ipv6.conf ]; then
         echo -e "${gl_huang}⚠️  检测到已存在永久禁用配置${gl_bai}"
         echo ""
-        read -e -p "$(echo -e "${gl_huang}是否重新执行永久禁用？(Y/N): ${gl_bai}")" confirm
+        if [ "$AUTO_MODE" = "1" ]; then
+            confirm=Y
+        else
+            read -e -p "$(echo -e "${gl_huang}是否重新执行永久禁用？(Y/N): ${gl_bai}")" confirm
+        fi
 
         case "$confirm" in
             [Yy])
                 ;;
             *)
                 echo "已取消"
+                break_end
                 return 1
                 ;;
         esac
     fi
     
     echo ""
-    read -e -p "$(echo -e "${gl_huang}确认永久禁用IPv6？(Y/N): ${gl_bai}")" confirm
+    if [ "$AUTO_MODE" = "1" ]; then
+        confirm=Y
+    else
+        read -e -p "$(echo -e "${gl_huang}确认永久禁用IPv6？(Y/N): ${gl_bai}")" confirm
+    fi
 
     case "$confirm" in
         [Yy])
             echo ""
-            echo -e "${gl_zi}[步骤 1/2] 创建永久禁用配置...${gl_bai}"
+            echo -e "${gl_zi}[步骤 1/3] 备份当前IPv6状态...${gl_bai}"
             
+            # 读取当前IPv6状态并备份
+            local ipv6_all=$(sysctl -n net.ipv6.conf.all.disable_ipv6 2>/dev/null || echo "0")
+            local ipv6_default=$(sysctl -n net.ipv6.conf.default.disable_ipv6 2>/dev/null || echo "0")
+            local ipv6_lo=$(sysctl -n net.ipv6.conf.lo.disable_ipv6 2>/dev/null || echo "0")
+            
+            # 创建备份文件
+            cat > /etc/sysctl.d/.ipv6-state-backup.conf << BACKUPEOF
+# IPv6 State Backup - Created on $(date '+%Y-%m-%d %H:%M:%S')
+# This file is used to restore IPv6 state when canceling permanent disable
+net.ipv6.conf.all.disable_ipv6=${ipv6_all}
+net.ipv6.conf.default.disable_ipv6=${ipv6_default}
+net.ipv6.conf.lo.disable_ipv6=${ipv6_lo}
+BACKUPEOF
+            
+            echo -e "${gl_lv}✅ 状态已备份${gl_bai}"
+            echo ""
+            
+            echo -e "${gl_zi}[步骤 2/3] 创建永久禁用配置...${gl_bai}"
+            
+            # 创建永久禁用配置文件
             cat > /etc/sysctl.d/99-disable-ipv6.conf << EOF
 # Permanently Disable IPv6
 net.ipv6.conf.all.disable_ipv6 = 1
@@ -175,9 +204,12 @@ EOF
             echo -e "${gl_lv}✅ 配置文件已创建${gl_bai}"
             echo ""
             
-            echo -e "${gl_zi}[步骤 2/2] 应用配置...${gl_bai}"
+            echo -e "${gl_zi}[步骤 3/3] 应用配置...${gl_bai}"
+            
+            # 应用配置
             sysctl --system >/dev/null 2>&1
             
+            # 验证状态
             local ipv6_status=$(sysctl -n net.ipv6.conf.all.disable_ipv6 2>/dev/null)
             
             echo ""
@@ -186,10 +218,14 @@ EOF
                 echo ""
                 echo -e "${gl_zi}说明：${gl_bai}"
                 echo "  - 配置文件: /etc/sysctl.d/99-disable-ipv6.conf"
+                echo "  - 备份文件: /etc/sysctl.d/.ipv6-state-backup.conf"
                 echo "  - 重启后此配置仍然生效"
+                echo "  - 如需恢复，请选择'取消永久禁用'选项"
             else
                 echo -e "${gl_hong}❌ IPv6 禁用失败${gl_bai}"
+                # 如果失败，删除配置文件
                 rm -f /etc/sysctl.d/99-disable-ipv6.conf
+                rm -f /etc/sysctl.d/.ipv6-state-backup.conf
             fi
             ;;
         *)
@@ -198,6 +234,109 @@ EOF
     esac
     
     echo ""
+    break_end
+}
+
+cancel_ipv6_permanent_disable() {
+    echo -e "${gl_kjlan}=== 取消永久禁用IPv6 ===${gl_bai}"
+    echo ""
+    echo "此操作将完全还原到执行永久禁用前的状态"
+    echo "------------------------------------------------"
+    echo ""
+    
+    # 检查是否存在永久禁用配置
+    if [ ! -f /etc/sysctl.d/99-disable-ipv6.conf ]; then
+        echo -e "${gl_huang}⚠️  未检测到永久禁用配置${gl_bai}"
+        echo ""
+        echo "可能原因："
+        echo "  - 从未执行过'永久禁用IPv6'操作"
+        echo "  - 配置文件已被手动删除"
+        echo ""
+        break_end
+        return 1
+    fi
+    
+    read -e -p "$(echo -e "${gl_huang}确认取消永久禁用并恢复原始状态？(Y/N): ${gl_bai}")" confirm
+    
+    case "$confirm" in
+        [Yy])
+            echo ""
+            echo -e "${gl_zi}[步骤 1/4] 删除永久禁用配置...${gl_bai}"
+            
+            # 删除永久禁用配置文件
+            rm -f /etc/sysctl.d/99-disable-ipv6.conf
+            echo -e "${gl_lv}✅ 配置文件已删除${gl_bai}"
+            echo ""
+            
+            echo -e "${gl_zi}[步骤 2/4] 检查备份文件...${gl_bai}"
+            
+            # 检查备份文件
+            if [ -f /etc/sysctl.d/.ipv6-state-backup.conf ]; then
+                echo -e "${gl_lv}✅ 找到备份文件${gl_bai}"
+                echo ""
+                
+                echo -e "${gl_zi}[步骤 3/4] 从备份还原原始状态...${gl_bai}"
+                
+                # 读取备份的原始值
+                local backup_all=$(grep 'net.ipv6.conf.all.disable_ipv6' /etc/sysctl.d/.ipv6-state-backup.conf | awk -F'=' '{print $2}')
+                local backup_default=$(grep 'net.ipv6.conf.default.disable_ipv6' /etc/sysctl.d/.ipv6-state-backup.conf | awk -F'=' '{print $2}')
+                local backup_lo=$(grep 'net.ipv6.conf.lo.disable_ipv6' /etc/sysctl.d/.ipv6-state-backup.conf | awk -F'=' '{print $2}')
+                
+                # 恢复原始值
+                sysctl -w net.ipv6.conf.all.disable_ipv6=${backup_all} >/dev/null 2>&1
+                sysctl -w net.ipv6.conf.default.disable_ipv6=${backup_default} >/dev/null 2>&1
+                sysctl -w net.ipv6.conf.lo.disable_ipv6=${backup_lo} >/dev/null 2>&1
+                
+                # 删除备份文件
+                rm -f /etc/sysctl.d/.ipv6-state-backup.conf
+                
+                echo -e "${gl_lv}✅ 已从备份还原原始状态${gl_bai}"
+            else
+                echo -e "${gl_huang}⚠️  未找到备份文件${gl_bai}"
+                echo ""
+                
+                echo -e "${gl_zi}[步骤 3/4] 恢复到系统默认（启用IPv6）...${gl_bai}"
+                
+                # 恢复到系统默认（启用IPv6）
+                sysctl -w net.ipv6.conf.all.disable_ipv6=0 >/dev/null 2>&1
+                sysctl -w net.ipv6.conf.default.disable_ipv6=0 >/dev/null 2>&1
+                sysctl -w net.ipv6.conf.lo.disable_ipv6=0 >/dev/null 2>&1
+                
+                echo -e "${gl_lv}✅ 已恢复到系统默认（IPv6启用）${gl_bai}"
+            fi
+            
+            echo ""
+            echo -e "${gl_zi}[步骤 4/4] 应用配置...${gl_bai}"
+            
+            # 应用配置
+            sysctl --system >/dev/null 2>&1
+            
+            # 验证状态
+            local ipv6_status=$(sysctl -n net.ipv6.conf.all.disable_ipv6 2>/dev/null)
+            
+            echo ""
+            if [ "$ipv6_status" = "0" ]; then
+                echo -e "${gl_lv}✅ IPv6 已恢复启用${gl_bai}"
+                echo ""
+                echo -e "${gl_zi}说明：${gl_bai}"
+                echo "  - 所有相关配置文件已清理"
+                echo "  - IPv6 已完全恢复到执行永久禁用前的状态"
+                echo "  - 重启后此状态依然保持"
+            else
+                echo -e "${gl_huang}⚠️  IPv6 状态: 禁用（值=${ipv6_status}）${gl_bai}"
+                echo ""
+                echo "可能原因："
+                echo "  - 系统中存在其他IPv6禁用配置"
+                echo "  - 手动执行 sysctl -w 命令重新启用IPv6"
+            fi
+            ;;
+        *)
+            echo "已取消"
+            ;;
+    esac
+    
+    echo ""
+    break_end
 }
 
 manage_ipv6() {
@@ -205,6 +344,7 @@ manage_ipv6() {
         echo -e "${gl_kjlan}=== IPv6 管理 ===${gl_bai}"
         echo ""
         
+        # 显示当前IPv6状态
         local ipv6_status=$(sysctl -n net.ipv6.conf.all.disable_ipv6 2>/dev/null)
         local status_text=""
         local status_color=""
@@ -220,6 +360,7 @@ manage_ipv6() {
         echo -e "当前状态: ${status_color}${status_text}${gl_bai}"
         echo ""
         
+        # 检查是否存在永久禁用配置
         if [ -f /etc/sysctl.d/99-disable-ipv6.conf ]; then
             echo -e "${gl_huang}⚠️  检测到永久禁用配置文件${gl_bai}"
             echo ""
@@ -227,6 +368,7 @@ manage_ipv6() {
         
         echo "------------------------------------------------"
         echo "1. 永久禁用IPv6（重启后仍生效）"
+        echo "3. 取消永久禁用（完全还原）"
         echo "0. 不管理IPv6，继续"
         echo "------------------------------------------------"
         read -e -p "请输入选择: " choice
@@ -234,6 +376,10 @@ manage_ipv6() {
         case "$choice" in
             1)
                 disable_ipv6_permanent
+                return
+                ;;
+            3)
+                cancel_ipv6_permanent_disable
                 return
                 ;;
             0)
