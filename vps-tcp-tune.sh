@@ -135,7 +135,6 @@ check_disk_space() {
 }
 
 disable_ipv6_temporary() {
-    clear
     echo -e "${gl_kjlan}=== 临时禁用IPv6 ===${gl_bai}"
     echo ""
     echo "此操作将临时禁用IPv6，重启后自动恢复"
@@ -179,7 +178,6 @@ disable_ipv6_temporary() {
 }
 
 disable_ipv6_permanent() {
-    clear
     echo -e "${gl_kjlan}=== 永久禁用IPv6 ===${gl_bai}"
     echo ""
     echo "此操作将永久禁用IPv6，重启后仍然生效"
@@ -283,7 +281,6 @@ EOF
 }
 
 cancel_ipv6_permanent_disable() {
-    clear
     echo -e "${gl_kjlan}=== 取消永久禁用IPv6 ===${gl_bai}"
     echo ""
     echo "此操作将完全还原到执行永久禁用前的状态"
@@ -387,7 +384,6 @@ cancel_ipv6_permanent_disable() {
 
 manage_ipv6() {
     while true; do
-        clear
         echo -e "${gl_kjlan}=== IPv6 管理 ===${gl_bai}"
         echo ""
         
@@ -424,12 +420,15 @@ manage_ipv6() {
         case "$choice" in
             1)
                 disable_ipv6_temporary
+                return
                 ;;
             2)
                 disable_ipv6_permanent
+                return
                 ;;
             3)
                 cancel_ipv6_permanent_disable
+                return
                 ;;
             0)
                 return
@@ -1763,7 +1762,6 @@ xanmod_select_kernel_package() {
 }
 
 install_xanmod_kernel() {
-    clear
     echo -e "${gl_kjlan}=== 安装 XanMod 内核与 BBR v3 ===${gl_bai}"
     echo "视频教程: https://www.bilibili.com/video/BV14K421x7BS"
     echo "------------------------------------------------"
@@ -2052,7 +2050,6 @@ dns_purify_fix_systemd_resolved() {
 }
 
 dns_purify_and_harden() {
-    clear
     echo -e "${gl_kjlan}╔════════════════════════════════════════════════════════════╗${gl_bai}"
     echo -e "${gl_kjlan}║    DNS净化与安全加固脚本 - SSH安全增强版 v2.0             ║${gl_bai}"
     echo -e "${gl_kjlan}╚════════════════════════════════════════════════════════════╝${gl_bai}"
@@ -3790,7 +3787,6 @@ ROLLBACK_SCRIPT
 }
 
 update_xanmod_kernel() {
-    clear
     echo -e "${gl_kjlan}=== 更新 XanMod 内核 ===${gl_bai}"
     echo "------------------------------------------------"
     
@@ -4080,9 +4076,9 @@ run_personalized_tune() {
     AUTO_MODE=""
     ONE_SHOT_MODE=1
     dns_purify_and_harden
-    ONE_SHOT_MODE=""
 
     manage_ipv6
+    ONE_SHOT_MODE=""
 
     optimize_hosts_file
 }
