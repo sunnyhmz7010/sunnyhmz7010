@@ -28,6 +28,7 @@ check_root() {
 
 break_end() {
     [ "$AUTO_MODE" = "1" ] && return
+    [ "${ONE_SHOT_MODE:-}" = "1" ] && return
     echo -e "${gl_lv}操作完成${gl_bai}"
     echo "按任意键继续..."
     read -n 1 -s -r -p ""
@@ -416,7 +417,7 @@ manage_ipv6() {
         echo "1. 临时禁用IPv6（重启后恢复）"
         echo "2. 永久禁用IPv6（重启后仍生效）"
         echo "3. 取消永久禁用（完全还原）"
-        echo "0. 返回主菜单"
+        echo "0. 不管理IPv6，继续"
         echo "------------------------------------------------"
         read -e -p "请输入选择: " choice
         
