@@ -4034,7 +4034,23 @@ run_personalized_tune() {
     manage_ipv6
     ONE_SHOT_MODE=""
 
-    optimize_hosts_file
+    echo -e "${gl_kjlan}=== hosts 文件优化 ===${gl_bai}"
+    echo ""
+    echo "1. 执行 hosts 文件优化"
+    echo "0. 不执行 hosts 文件优化"
+    echo "------------------------------------------------"
+    read -e -p "请输入选择: " hosts_choice
+
+    case "$hosts_choice" in
+        1)
+            optimize_hosts_file
+            ;;
+        0)
+            ;;
+        *)
+            echo "无效选择，已跳过 hosts 文件优化"
+            ;;
+    esac
 }
 
 main() {
