@@ -4036,6 +4036,13 @@ run_personalized_tune() {
 
     echo -e "${gl_kjlan}=== hosts 文件优化 ===${gl_bai}"
     echo ""
+    echo "优化内容："
+    echo "  - 首次执行备份原 /etc/hosts 到 /etc/hosts.bak.original"
+    echo "  - 清理完全重复的 hosts 记录和连续空行"
+    echo "  - 保留原有注释和自定义 hosts 记录"
+    echo "  - 缺少 localhost 时补充 127.0.0.1 localhost"
+    echo "  - 缺少本机 hostname 映射时补充 127.0.1.1 <hostname>"
+    echo ""
     echo "1. 执行 hosts 文件优化"
     echo "0. 不执行 hosts 文件优化"
     echo "------------------------------------------------"
