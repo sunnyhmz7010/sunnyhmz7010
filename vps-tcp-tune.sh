@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # 脚本原仓库：https://github.com/Eric86777/vps-tcp-tune
-# 个性化精简、hosts文件整理
+
+# 在线运行：使用 -q 忽略本机 curlrc，并用时间戳参数确保获取最新版本（无缓存）
+# bash <(curl -q -fsSL "https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/refs/heads/main/vps-tcp-tune.sh?$(date +%s)")
 
 # 颜色定义（保留中文变量名以兼容现有代码）
 gl_hong='\033[31m'      # 红色
