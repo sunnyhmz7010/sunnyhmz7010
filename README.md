@@ -37,7 +37,4 @@
   <a href="https://github.com/sunnyhmz7010/SBMeow">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SBMeow.svg" alt="SBMeow" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/vofly">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-vofly.svg" alt="vofly" width="49%" />
-  </a>
 </p>
