@@ -72,12 +72,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
-      - name: Generate pin card (mmwx-probe-komari-theme-adapter)
+      - name: Generate pin card (mmwx-probe-theme-adapter)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: pin
-          options: username=sunnyhmz7010&repo=mmwx-probe-komari-theme-adapter&show=prs_authored,prs_commented,issues_authored,issues_commented
-          path: dist/pin-mmwx-probe-komari-theme-adapter.svg
+          options: username=sunnyhmz7010&repo=mmwx-probe-theme-adapter&show=prs_authored,prs_commented,issues_authored,issues_commented
+          path: dist/pin-mmwx-probe-theme-adapter.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
