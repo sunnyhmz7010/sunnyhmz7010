@@ -28,8 +28,8 @@
   <a href="https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg" alt="halo-plugin-schedule-calendar" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/mmwx-probe-komari-theme-adapter">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-komari-theme-adapter.svg" alt="mmwx-probe-komari-theme-adapter" width="49%" />
+  <a href="https://github.com/sunnyhmz7010/mmwx-probe-theme-adapter">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-theme-adapter.svg" alt="mmwx-probe-theme-adapter" width="49%" />
   </a>
   <a href="https://github.com/sunnyhmz7010/SeekMeow">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" width="49%" />
