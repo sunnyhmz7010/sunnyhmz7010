@@ -5,6 +5,9 @@
 # 在线运行：使用 -q 忽略本机 curlrc，并用时间戳参数确保获取最新版本（无缓存）
 # bash <(curl -q -fsSL "https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/refs/heads/main/vps-tcp-tune.sh?$(date +%s)")
 
+# 修复旧版脚本的 DNS 启动配置
+# bash <(curl -q -fsSL "https://raw.githubusercontent.com/Eric86777/vps-tcp-tune/refs/heads/main/net-tcp-tune.sh?$(date +%s)") --repair-boot-recovery
+
 # 颜色定义（保留中文变量名以兼容现有代码）
 gl_hong='\033[31m'      # 红色
 gl_lv='\033[32m'        # 绿色
