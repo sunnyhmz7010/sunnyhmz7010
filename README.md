@@ -5,7 +5,7 @@
 </picture>
 
 ## 👋 关于我  
-#### 🚀 网络空间安全专业在读本科生 | CTF爱好者  
+#### 🚩 网络空间安全专业在读本科生 | CTF爱好者  
 #### 🌱 正在努力学习中  
 #### 💬 纵有狂风拔地起，我亦乘风破万里。
 
@@ -19,31 +19,34 @@
 ![Stats](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/stats.svg "继续努力~")
 ![Top Languages](https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/top-langs.svg)
 
-### 🚀 正在活跃开发 / 维护的项目
+### 🚧 正在开发
 
 <p align="center">
+  <a href="https://github.com/sunnyhmz7010/HashDrop">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-HashDrop.svg" alt="HashDrop" width="49%" />
+  </a>
+  <a href="https://github.com/sunnyhmz7010/Trylet">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-Trylet.svg" alt="Trylet" width="49%" />
+  </a>
   <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg" alt="telegram-bot-api-file-streaming" width="49%" />
-  </a>
+</p>
+
+### 🚀 活跃维护
+
+<p align="center">
   <a href="https://github.com/sunnyhmz7010/halo-plugin-schedule-calendar">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-schedule-calendar.svg" alt="halo-plugin-schedule-calendar" width="49%" />
   </a>
   <a href="https://github.com/sunnyhmz7010/mmwx-probe-theme-adapter">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-mmwx-probe-theme-adapter.svg" alt="mmwx-probe-theme-adapter" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/SeekMeow">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" width="49%" />
-  </a>
-  <a href="https://github.com/sunnyhmz7010/SBMeow">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SBMeow.svg" alt="SBMeow" width="49%" />
-  </a>
   <a href="https://github.com/MengMengCode/VoCat">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-VoCat.svg" alt="VoCat" width="49%" />
   </a>
-  <a href="https://github.com/sunnyhmz7010/HashDrop">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-HashDrop.svg" alt="HashDrop" width="49%" />
-  </a>
 </p>
+
+<div align="center">
+  <sub>以上为当前主要投入项目，更多仓库见 <a href="https://github.com/sunnyhmz7010?tab=repositories">Repositories</a>。未列出的未归档项目仍欢迎 issue/PR，但不保证响应时间。</sub>
+</div>
