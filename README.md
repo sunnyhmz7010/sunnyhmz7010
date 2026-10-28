@@ -28,6 +28,9 @@
   <a href="https://github.com/sunnyhmz7010/Trylet">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-Trylet.svg" alt="Trylet" width="49%" />
   </a>
+  <a href="https://github.com/sunnyhmz7010/jnu-cli">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-jnu-cli.svg" alt="jnu-cli" width="49%" />
+  </a>
   <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" width="49%" />
   </a>
