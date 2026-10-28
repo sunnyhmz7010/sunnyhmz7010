@@ -49,21 +49,3 @@
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-VoCat.svg" alt="VoCat" width="49%" />
   </a>
 </p>
-
-### 🛠️ 按需响应 
-<details>
-<summary>展开查看</summary>
-
-<p align="center">
-  <a href="https://github.com/sunnyhmz7010/SeekMeow">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SeekMeow.svg" alt="SeekMeow" width="49%" />
-  </a>
-  <a href="https://github.com/sunnyhmz7010/SBMeow">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-SBMeow.svg" alt="SBMeow" width="49%" />
-  </a>
-  <a href="https://github.com/sunnyhmz7010/telegram-bot-api-file-streaming">
-    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-telegram-bot-api-file-streaming.svg" alt="telegram-bot-api-file-streaming" width="49%" />
-  </a>
-</p>
-
-</details>
