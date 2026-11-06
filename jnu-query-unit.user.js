@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         暨大财务·本人收款信息速查
+// @name         新版报销系统（线上审批）·本人收款信息速查
 // @namespace    jnu.cw.local
 // @version      1.0.0
-// @description  在暨大财务系统（/znwb）页面内按姓名/学号查询本人收款信息；同源调用，仅本机显示，不写入任何服务端
+// @description  在新版报销系统（线上审批）页面内按姓名/学号查询本人收款信息；同源调用，仅本机显示，不写入任何服务端
 // @match        https://cw.jnu.edu.cn/znwb/*
 // @match        https://cw.jnu.edu.cn/znwb
 // @run-at       document-start
@@ -23,7 +23,6 @@
   const PAY_TTL = 10 * 60 * 1000;             // payId 缓存有效期
   const REQUEST_TIMEOUT = 10000;              // 单次请求超时（ms）
   const MAX_CANDIDATES = 4;                   // token 候选上限，控制请求次数
-  const LS_PAY_ID_OLD = 'jnu_cw_payid';       // v1.2 的永久缓存，启动时清掉
   const SS_PAY_ID = 'jnu_cw_payid_cache';
   const LS_TOKEN = 'jnu_cw_token_manual';
   const SS_CAPTURED = 'jnu_cw_token_captured';
@@ -440,9 +439,6 @@
       run();
     });
   }
-
-  // v1.2 曾把 payId 永久缓存在 localStorage，启动时清掉避免误用
-  try { localStorage.removeItem(LS_PAY_ID_OLD); } catch (e) { /* 忽略 */ }
 
   // document-start 注入：先挂请求捕获，等 DOM 就绪再挂面板
   hookTokenCapture();
