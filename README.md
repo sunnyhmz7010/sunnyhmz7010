@@ -34,6 +34,9 @@
   <a href="https://github.com/Ryrant/wenqu-chinese-learning-platform">
     <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-wenqu-chinese-learning-platform.svg" alt="wenqu-chinese-learning-platform" width="49%" />
   </a>
+  <a href="https://github.com/sunnyhmz7010/halo-plugin-simnook">
+    <img src="https://raw.githubusercontent.com/sunnyhmz7010/sunnyhmz7010/output/pin-halo-plugin-simnook.svg" alt="halo-plugin-simnook" width="49%" />
+  </a>
 </p>
 
 ### 🚀 活跃维护
