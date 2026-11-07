@@ -81,6 +81,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
 
+      - name: Generate pin card (halo-plugin-simnook)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: username=sunnyhmz7010&repo=halo-plugin-simnook&show=issues_authored,issues_commented
+          path: dist/pin-halo-plugin-simnook.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+
       - name: Generate pin card (halo-plugin-schedule-calendar)
         uses: stats-organization/github-readme-stats-action@v2
         with:
