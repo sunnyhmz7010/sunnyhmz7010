@@ -1,2 +1,3 @@
 DOMAIN-SUFFIX,sunnyhmz.top
 DOMAIN-SUFFIX,070676.xyz
+DOMAIN-SUFFIX,shuyicloud.com
